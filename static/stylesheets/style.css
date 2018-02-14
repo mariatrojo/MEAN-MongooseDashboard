@@ -1,0 +1,33 @@
+* {
+	padding: 0px;
+	margin: auto;
+}
+
+.container {
+	text-align: center;
+}
+
+h1 {
+	margin: 20px;
+}
+
+#new {
+	margin-left: 200px;
+}
+table, td {
+	border: 1px solid black;
+}
+th {
+	padding: 5px;
+	width: 150px;
+}
+td {
+	padding: 5px;
+}
+
+.form-container {
+	width: 180px;
+}
+.form {
+	text-align: right;
+}

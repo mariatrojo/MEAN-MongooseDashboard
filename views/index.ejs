@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<title>Dragon Dashboard</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Where are my dragons?</h1>
+		<p><a href="/mongooses/new" id="new">Add a dragon</a></p>
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<% for (var i = 0; i < data.length; i++) { %>
+				<tr>
+					<td><a href="/mongooses/<%= data[i].id %>"><%= data[i].name %></a></td>
+					<td><a href="/mongooses/edit/<%= data[i].id %>"><input type="submit" value="Edit"></a> | 
+						<form action="/mongooses/destroy/<%= data[i].id %>" method="post">
+						<input type="submit" value="Delete"></td>
+						</form>
+				</tr>
+			<% } %>
+		</table>
+	</div>
+</body>
+</html>
